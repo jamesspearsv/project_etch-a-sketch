@@ -1,14 +1,16 @@
 /*---Layout---*/
-.wrapper {
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .grid {
   display: grid;
-  width: 500px;
+  width: 50%;
   height: 500px;
-  margin: 5%;
+  margin: 2%;
+      margin-left: 25%;
 }
 
 /*---Style---*/

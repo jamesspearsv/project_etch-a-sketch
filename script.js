@@ -5,7 +5,7 @@ let divCount = 16; //Initial number of squares per side of grid.
 let buttonValue = 'black'; //Initnal color setting
 
 //-----Function Defs-----//
-//Resets grid on page and creates new grid
+//Creates new grid and resets current grid
 function createGrid(divCount, buttonValue) {
     let newGridSize = (divCount * divCount);
     //Limits user input
@@ -21,7 +21,8 @@ function createGrid(divCount, buttonValue) {
     for (i=0; i < newGridSize; i++) {
       const div = document.createElement('div');
         div.classList.add('gridItem');
-        div.style.cssText = `height: 500/${divCount}px;width: 500/${divCount}px;`
+        //div.style.cssText = `height: 500/${divCount}px;width: 500///${divCount}px;`
+        div.style.cssText = 'height: auto;width: auto';
       grid.style.cssText = `grid-template-columns: repeat(${divCount}, auto)`
       grid.appendChild(div);
     };
@@ -56,8 +57,8 @@ gridItem.forEach((gridItem) => {
   });
 };
 
+//Generates random RGB values
 function randRGB () {
-  //Generates random RGB values
   let red = Math.floor ((Math.random() * 255) + 1);
   let blue = Math.floor ((Math.random() * 255) + 1);
   let green = Math.floor ((Math.random() * 255) + 1);
@@ -75,7 +76,7 @@ btns.forEach((button) =>{
     divCount = prompt('How many squares wide should the grid be? 1-64');
         divCount = +divCount; //Converts string to number
     buttonValue = button.value;
-    console.log(buttonValue);
+
     createGrid(divCount, buttonValue);
     });
 });
