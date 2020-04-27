@@ -1,7 +1,6 @@
 /*---Layout---*/
 .wrapper {
-  display: grid;
-  grid-template-columns: auto 500px auto;
+  
 }
 
 .grid {
@@ -12,6 +11,9 @@
 }
 
 /*---Style---*/
+body {
+  background-color: lightblue;
+}
 .gridItem {
    background-color: white;
    border: 1px solid black;
