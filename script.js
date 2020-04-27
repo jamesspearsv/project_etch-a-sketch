@@ -1,11 +1,12 @@
 //-----Global Variables-----//
 const grid = document.querySelector('.grid');
-const resetButton = document.querySelector('.resetButton');
+const btns = document.querySelectorAll('.resetButton');
 let divCount = 16; //Initial number of squares per side of grid.
+let buttonValue = 'black'; //Initnal color setting
 
 //-----Function Defs-----//
 //Resets grid on page and creates new grid
-function createGrid() {
+function createGrid(divCount, buttonValue) {
     let newGridSize = (divCount * divCount);
     //Limits user input
     if (divCount < 1 || divCount > 64) {
@@ -24,11 +25,17 @@ function createGrid() {
       grid.style.cssText = `grid-template-columns: repeat(${divCount}, auto)`
       grid.appendChild(div);
     };
-    hover();
+
+    if (buttonValue === 'black') {
+      hover();
+    } else {
+      rgbHover();
+    }
 };
 
 
-//Adds hover event listener to gridItems
+//Adds hover event listener to gridItems.
+//Changes background from white to black
 function hover() {
 const gridItem = document.querySelectorAll ('.gridItem');
 gridItem.forEach((gridItem) => {
@@ -38,11 +45,37 @@ gridItem.forEach((gridItem) => {
   });
 };
 
-//-----Script-----//
-createGrid(divCount);
+//Adds hover event listener to gridItems.
+//Changes background from white to random RGB color.
+function rgbHover() {
+const gridItem = document.querySelectorAll ('.gridItem');
+gridItem.forEach((gridItem) => {
+  gridItem.addEventListener('mouseenter', (e) => {
+    e.target.style.backgroundColor = `${randRGB()}`;
+    });
+  });
+};
 
-resetButton.addEventListener('click', () => {
-  divCount = prompt('How many squares wide should the grid be? 1-64');
-      divCount = +divCount; //Converts string to number
-  createGrid(divCount);
+function randRGB () {
+  //Generates random RGB values
+  let red = Math.floor ((Math.random() * 255) + 1);
+  let blue = Math.floor ((Math.random() * 255) + 1);
+  let green = Math.floor ((Math.random() * 255) + 1);
+    //Returns string with style to be applied
+    return `rgb(${red}, ${green}, ${blue})`;
+};
+
+//-----Script-----//
+//Creates grid on page load
+createGrid(divCount, buttonValue);
+
+//Reset buttons script
+btns.forEach((button) =>{
+  button.addEventListener('click', () => {
+    divCount = prompt('How many squares wide should the grid be? 1-64');
+        divCount = +divCount; //Converts string to number
+    buttonValue = button.value;
+    console.log(buttonValue);
+    createGrid(divCount, buttonValue);
+    });
 });
