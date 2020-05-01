@@ -7,22 +7,35 @@
     <link rel="stylesheet" href="style.css">
   </head>
     <body>
-      <div class="container">
+      <main>
 
-        <h1>10% darker test</h1>
-
-        <h1 class="title">Etch-a-Sketch</h1>
-
-        <div class="btns">
-          <button class="resetButton" value="black">Clean Up and Use B&W</button>
-          <button class="resetButton" value="RGB">Clean Up and Use RGB Color</div>
-          <button class="resetButton" value="blackLevel"> Clean up and Use Black Level</button>
-          <button class="resetButton" value="moasic">Use A Moasic Background</button>
+      <div class="gridContainer">
+        <div class="gridContainer__title">
+          <h1>Etch-a-Sketch</h1>
         </div>
-
         <div class="grid"></div>
-
       </div>
+
+      <div class="sidebarRight">
+        <div class="sidebarRight__drawMode">
+          <div class="btns">
+            <button class="resetButton" value="black">Black & White</button>
+            <button class="resetButton" value="RGB">RGB Color</div>
+            <button class="resetButton" value="grayScale">Gray Scale</button>
+            <button class="resetButton" value="shades">Color Shades</button>
+          </div>
+          <h2>Do you want to draw in color?</h2>
+          <form class="colorMode" action="index.html" method="post">
+            <input type="radio" name="colorMode" value="yes">
+              <label for="yes">YES</label>
+            <input type="radio" name="colorMode" value="no">
+              <label for="no">No...</label>
+          </form>
+
+        </div>
+      </div>
+
+      </main>
     </body>
   <script src="script.js"></script>
 </html>
