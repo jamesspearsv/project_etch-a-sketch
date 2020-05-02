@@ -96,3 +96,19 @@ body {
   padding: 3%;
   border: 2px solid rgb(135, 206, 250);
 }
+
+.sidebarRight__sourceCode a:hover {
+  display: block;
+  text-decoration: none;
+  width: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 3%;
+  border: 2px solid rgb(135, 206, 250);
+
+  transition: 0.5s;
+}
