@@ -1,14 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
-    <body>
-      <main>
-
+  <body>
+    <main>
       <div class="gridContainer">
         <div class="gridContainer__title">
           <h1>Etch-a-Sketch</h1>
@@ -19,23 +17,25 @@
       <div class="sidebarRight">
         <div class="sidebarRight__drawMode">
           <div class="btns">
+            <h2>Pick your drawing mode</h2>
             <button class="resetButton" value="black">Black & White</button>
-            <button class="resetButton" value="RGB">RGB Color</div>
+            <button class="resetButton" value="RGB">RGB Color</button>
             <button class="resetButton" value="grayScale">Gray Scale</button>
             <button class="resetButton" value="shades">Color Shades</button>
           </div>
-          <h2>Do you want to draw in color?</h2>
-          <form class="colorMode" action="index.html" method="post">
-            <input type="radio" name="colorMode" value="yes">
-              <label for="yes">YES</label>
-            <input type="radio" name="colorMode" value="no">
-              <label for="no">No...</label>
-          </form>
-
+        </div>
+        <div class="sidebarRight__sourceCode">
+          <h2>View the Source Code</h2>
+          <a href="https://github.com/jamesspearsv/project_etch-a-sketch"
+            >HERE</a
+          >
+        </div>
+        <div class="sidebarRight__copyRight">
+          <p>James Spears, V</p>
+          <p>©2020</p>
         </div>
       </div>
-
-      </main>
-    </body>
+    </main>
+  </body>
   <script src="script.js"></script>
 </html>

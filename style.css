@@ -6,35 +6,93 @@ main {
     "gridContainer gridContainer sidebarRight"
     "gridContainer gridContainer sidebarRight";
 }
-.gridContainer {
-  grid-area: gridContainer;
-}
-.sidebarRight {
-  grid-area: sidebarRight;
-}
 
 .gridContainer {
+  grid-area: gridContainer;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.sidebarRight {
+  grid-area: sidebarRight;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 .grid {
   display: grid;
-  width: 50%;
+  width: 80%;
   height: 500px;
   margin: 1%;
   margin-left: ;
 }
 
+.resetButton {
+  display: block;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 3%;
+}
+
+.sidebarRight__copyRight {
+  margin-top: auto;
+}
+
+/*---Typography---*/
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
 /*---Style---*/
 body {
-  background-color: lightblue;
-}
-.gridItem {
-  border: 1px solid black;
+  background-color: rgb(135, 206, 250);
 }
 
 .grid {
   border: 4px solid black;
+}
+
+.sidebarRight {
+  background-color: rgb(255, 255, 255);
+  padding: 0.5em;
+  border: 0.2em solid rgb(0, 0, 0);
+  border-radius: 0.5em;
+}
+
+.resetButton {
+  background-color: rgb(135, 206, 250);
+  color: rgb(255, 255, 255);
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 3%;
+  border: 2px solid rgb(135, 206, 250);
+}
+
+.resetButton:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 3%;
+  border: 2px solid rgb(135, 206, 250);
+
+  transition: 0.5s;
+}
+
+.sidebarRight__sourceCode a {
+  display: block;
+  text-decoration: none;
+  width: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgb(135, 206, 250);
+  color: rgb(255, 255, 255);
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 3%;
+  border: 2px solid rgb(135, 206, 250);
 }

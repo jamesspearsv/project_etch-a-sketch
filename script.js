@@ -2,7 +2,7 @@
 const grid = document.querySelector(".grid");
 const btns = document.querySelectorAll(".resetButton");
 let divCount = 16; //Deault number of squares per side of grid.
-let buttonValue = "grayScale"; //Default color setting
+let buttonValue = "black"; //Default color setting
 
 //-----Function Defs-----//
 //Creates new grid and resets current grid
