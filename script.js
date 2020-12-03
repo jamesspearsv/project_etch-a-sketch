@@ -4,7 +4,7 @@ const btns = document.querySelectorAll(".resetButton");
 let divCount = 16; //Deault number of squares per side of grid.
 let buttonValue = "black"; //Default color setting
 
-//-----Function Defs-----//
+//-----Function Definitions-----//
 //Creates new grid and resets current grid
 function createGrid(divCount) {
   let newGridSize = divCount * divCount;
