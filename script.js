@@ -1,3 +1,4 @@
+//Comment
 //-----Global Variables-----//
 const grid = document.querySelector(".grid");
 const btns = document.querySelectorAll(".resetButton");
