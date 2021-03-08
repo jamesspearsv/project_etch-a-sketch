@@ -58,7 +58,7 @@ function setDrawMode(buttonValue) {
 function hover() {
   const gridItem = document.querySelectorAll(".gridItem");
   gridItem.forEach((gridItem) => {
-    gridItem.addEventListener("click", (e) => {
+    gridItem.addEventListener("mouseenter", (e) => {
       e.target.style.cssText = "background-color: rgb(0, 0, 0);";
     });
   });
