@@ -9,10 +9,6 @@ let buttonValue = "black"; //Default color setting
 //Creates new grid and resets current grid
 function createGrid(divCount) {
   let newGridSize = divCount * divCount;
-  //Limits user input
-  if (divCount < 1 || divCount > 64) {
-    return;
-  }
 
   //Removes previous grid
   while (grid.firstChild) {
@@ -120,6 +116,16 @@ btns.forEach((button) => {
   button.addEventListener("click", () => {
     buttonValue = button.value;
     divCount = prompt("How many squares wide should the grid be? 1-64");
+
+    // Checks user input
+    while (true) {
+      if (divCount < 1 || divCount > 64) {
+        divCount = prompt("Oops! How many squares wide should the grid be? 1-64");
+      } else {
+        break
+      }
+    }
+
     createGrid(divCount);
     setTheme(buttonValue);
     setDrawMode(buttonValue);
